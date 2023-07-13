@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+</body>
+</html>
+<!-- cdn方式引入 react核心库-->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<!-- react-dom 用于操作DOM -->
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<!-- 引入jsx语法 -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- 必须添加text/babel -->
+<script type="text/babel">
+    //react代码书写位置
+    //传入真实的dom节点，通过ReactDOM.craateRoot将react元素渲染到页面中
+    let app=ReactDOM.createRoot(document.getElementById('root'))
+
+    //react渲染页面
+    app.render(<div>春梦几何，情深几许。</div>)
+</script>

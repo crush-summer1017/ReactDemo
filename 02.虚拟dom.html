@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+</body>
+</html>
+<!-- cdn方式引入 react核心库-->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<!-- react-dom 用于操作DOM -->
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<!-- 引入jsx语法 -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- 必须添加text/babel -->
+<script type="text/babel">
+    let app=ReactDOM.createRoot(document.getElementById('root'))
+
+    //jsx创建虚拟DOM
+    let vNode=(
+        <div>
+            <p>春意迷人眼</p>
+            <p>海棠花未眠</p>    
+        </div>
+    );
+    console.log(vNode,'虚拟dom')
+    app.render(vNode)
+</script>
